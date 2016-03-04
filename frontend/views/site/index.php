@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 
 $this->title =  'ระบบ DataCenter 50 Pansa Hospital';
-
+use yii\helpers\Html;
 ?>
 <body background="/datacenter/image/background.jpg">
 <div class="site-index">   
@@ -62,5 +62,21 @@ $this->title =  'ระบบ DataCenter 50 Pansa Hospital';
 
     </div>
     <center><p><a class="btn btn-lg btn-success" href="http://localhost/datacenter/frontend/web/">กลับหน้าหลัก</a></p></center>
+    <?php  
+    $route1=  Yii::$app->urlManager->createUrl('test/test1');
+    ?>
+    <a href="<?=$route1?>">ไปที่ test1</a>
+    <br>
+    
+        <?php  
+    $route2=  Yii::$app->urlManager->createUrl(['test/test2','name'=>'somza','lname'=>'tasawang']);
+    ?>
+    <a href="<?=$route2?>">ไปที่ test2</a>
+    <br>
+    
+    <?=\yii\helpers\Html::a('ลิ้งแบบที่ 3',['test/test1','a'=>'1']) ?>
+     <br>
+    
+  
 </div>
 
